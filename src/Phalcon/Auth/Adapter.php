@@ -139,6 +139,6 @@ abstract class Adapter implements AdapterInterface
      */
 	public function data($field=NULL)
 	{
-		return ( !$field ?  $this->payload : $this->payload[$field] );
+		return ( !$field ?  $this->payload : ($this->payload[$field] ?? null) );
 	}
 }
